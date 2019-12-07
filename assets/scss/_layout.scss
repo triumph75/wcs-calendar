@@ -1,0 +1,132 @@
+@import "colors";
+$maxWidth: 100%;
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: "Roboto Condensed", sans-serif;
+    //background: $main-bg;
+    //background-image: linear-gradient($main-bg 0%, darken($main-bg, 12%) 100%);
+    background-image: url(https://lh3.googleusercontent.com/-8yGCBzF9F_s/XCHzZ5t7sJI/AAAAAAAAAlA/fnnU7Cma8UM9oE9ztOtlcqFs_aZiRI-aQCK8BGAs/s0/2018-12-25.jpg);
+    //color: $body-color;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.group {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+}
+
+.calendar-container {
+    width: 360px;
+    margin: 3em auto;
+    padding: 2em;
+    border: 1px solid $calendar-border;
+    border-radius: 5px;
+    background: $calendar-bg;
+}
+
+table {
+    clear: both;
+    width: 100%;
+    border: 1px solid $calendar-border;
+    border-radius: 3px;
+    border-collapse: collapse;
+    color: $calendar-color;
+}
+
+td {
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid $calendar-border;
+    border-top: 1px solid $calendar-border;
+    width: 100% / 7;
+    &:hover {
+        background-color: #F8F8F8;
+        border-right: 10px solid $calendar-border;
+        border-top: 10px solid $calendar-border;
+        border-bottom: 10px solid $calendar-border;
+        border-left: 10px solid $calendar-border;
+    }
+}
+
+td.not-current {
+    color: $calendar-fade-color;
+}
+
+td.today {
+    //font-weight: 700;
+    color: $calendar-standout;
+    //font-size: 1.5em;
+    &:hover {
+        border-right: 1px solid $calendar-border;
+        border-top: 1px solid $calendar-border;
+        border-bottom: 1px solid $calendar-border;
+        border-left: 1px solid $calendar-border;
+        //background: $main-bg;
+        //background-image: linear-gradient($main-bg 0%, darken($main-bg, 12%) 100%);
+        background-image: url(https://media.giphy.com/media/lffXguRwxQov3iLq73/giphy.gif);
+    }
+}
+
+thead td {
+    border: none;
+    color: $calendar-standout;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#btnPrev {
+    float: left;
+    margin-bottom: 20px;
+    &:before {
+        content: '\f104';
+        font-family: FontAwesome;
+        padding-right: 4px;
+    }
+}
+
+#btnNext {
+    float: right;
+    margin-bottom: 20px;
+    &:after {
+        content: '\f105';
+        font-family: FontAwesome;
+        padding-left: 4px;
+    }
+}
+
+#btnPrev,
+#btnNext {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: $calendar-fade-color;
+    cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $calendar-standout;
+        font-weight: bold;
+    }
+}
