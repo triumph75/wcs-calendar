@@ -1,4 +1,5 @@
 @import "colors";
+@import "animation";
 $maxWidth: 100%;
 body {
     font-size: 100%;
@@ -81,9 +82,11 @@ td.today {
         border-top: 1px solid $calendar-border;
         border-bottom: 1px solid $calendar-border;
         border-left: 1px solid $calendar-border;
+        animation-duration: 15s;
+        animation-name: slidein;
         //background: $main-bg;
         //background-image: linear-gradient($main-bg 0%, darken($main-bg, 12%) 100%);
-        background-image: url(https://media.giphy.com/media/lffXguRwxQov3iLq73/giphy.gif);
+        background-image: url(https://media.giphy.com/media/7FgmaCJgUAMxRWatWB/giphy.gif);
     }
 }
 
